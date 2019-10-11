@@ -21,3 +21,4 @@ C:\DESENVOLVIMENTO\EcommerceEcovilleASP\EcommerceEcovilleASP\bin\Debug\netcoreap
 C:\DESENVOLVIMENTO\EcommerceEcovilleASP\EcommerceEcovilleASP\bin\Debug\netcoreapp2.1\EcommerceEcovilleASP.Views.pdb
 C:\DESENVOLVIMENTO\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.Views.pdb
 C:\DESENVOLVIMENTO\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.csproj.CopyComplete
+C:\DESENVOLVIMENTO\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Cadastrar.g.cshtml.cs
