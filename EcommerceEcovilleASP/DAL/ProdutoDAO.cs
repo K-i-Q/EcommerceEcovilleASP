@@ -25,7 +25,7 @@ namespace EcommerceEcovilleASP.DAL
 
         public void EditarProduto(Produto p)
         {
-            _context.Entry(p).State = EntityState.Modified;
+            _context.Update(p);
             _context.SaveChanges();
         }
         public void RemoverProduto(Produto p)

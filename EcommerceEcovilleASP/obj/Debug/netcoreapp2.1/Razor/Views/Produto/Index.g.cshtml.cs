@@ -65,7 +65,7 @@ using EcommerceEcovilleASP.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(128, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "670de5901c2148b1aaafed53a8880734", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa4c565f6419448ea66c2403850c42a6", async() => {
                 BeginContext(134, 87, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Index</title>\r\n");
                 EndContext();
@@ -85,12 +85,12 @@ using EcommerceEcovilleASP.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(230, 1049, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "183036a68a994e4d8989dc033b3fc080", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f2180f94730476b82e229dcc0bdfde6", async() => {
                 BeginContext(236, 56, true);
                 WriteLiteral("\r\n\r\n    <h2>Gerenciamento de Produtos</h2>\r\n    \r\n\r\n    ");
                 EndContext();
                 BeginContext(292, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cca11f851919409099ad0ea6cec5eec8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79f9623850f34d78bab65e892672c872", async() => {
                     BeginContext(318, 19, true);
                     WriteLiteral("Cadastro de Produto");
                     EndContext();
@@ -186,7 +186,7 @@ using EcommerceEcovilleASP.Models;
                 WriteLiteral("</td>\r\n                <td>");
                 EndContext();
                 BeginContext(991, 64, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b05328487e15446da5902ffa3d128dae", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b36236f6aaa48c5bc695c266ff81e09", async() => {
                     BeginContext(1045, 6, true);
                     WriteLiteral("Editar");
                     EndContext();
@@ -221,7 +221,7 @@ using EcommerceEcovilleASP.Models;
                 WriteLiteral("</td>\r\n                <td>");
                 EndContext();
                 BeginContext(1082, 66, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "37205422f49a4480aa0a74cdde880502", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1335faf40016469e8c76f776c966ebb5", async() => {
                     BeginContext(1137, 7, true);
                     WriteLiteral("Excluir");
                     EndContext();

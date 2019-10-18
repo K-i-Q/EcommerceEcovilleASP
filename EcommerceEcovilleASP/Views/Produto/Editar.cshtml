@@ -11,8 +11,7 @@
 </head>
 <body>
     <form asp-action="Editar" method="post">
-        <label>Id:</label><br />
-        <input type="number" readonly name="txtId" value="@p.ProdutoId" /><br />
+        <input type="hidden" name="txtId" value="@p.ProdutoId" /> 
         <label>Nome:</label><br />
         <input type="text" name="txtNome" value="@p.Nome" /><br />
         <label>Descrição:</label><br />

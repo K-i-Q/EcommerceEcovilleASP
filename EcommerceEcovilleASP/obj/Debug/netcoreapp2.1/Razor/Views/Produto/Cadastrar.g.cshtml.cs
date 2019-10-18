@@ -58,7 +58,7 @@ using EcommerceEcovilleASP.Models;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9c0ea65ccae74ba5a2c6635b1fde7958", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f78d7a1bafb4896ad7cc13c0c7bf838", async() => {
                 BeginContext(33, 91, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Cadastrar</title>\r\n");
                 EndContext();
@@ -78,12 +78,12 @@ using EcommerceEcovilleASP.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(133, 554, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc8b6eede567447e85228ce64c357262", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b6cbc63f97042e8af62b102b466a326", async() => {
                 BeginContext(139, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(145, 533, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c49c148eaae94a758e9ab7b6428237e2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef75a05b5f274fa883007d2c9c16dea4", async() => {
                     BeginContext(188, 483, true);
                     WriteLiteral(@"
         <label>Nome:</label><br />
