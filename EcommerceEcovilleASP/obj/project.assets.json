@@ -12536,24 +12536,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carlos Henrique\\.nuget\\packages\\": {},
+    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DESENVOLVIMENTO\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
+      "projectUniqueName": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
       "projectName": "EcommerceEcovilleASP",
-      "projectPath": "C:\\DESENVOLVIMENTO\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
-      "packagesPath": "C:\\Users\\Carlos Henrique\\.nuget\\packages\\",
-      "outputPath": "C:\\DESENVOLVIMENTO\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\obj\\",
+      "projectPath": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
+      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+      "outputPath": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Carlos Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

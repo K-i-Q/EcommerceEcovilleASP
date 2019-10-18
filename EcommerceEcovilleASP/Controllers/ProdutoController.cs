@@ -18,8 +18,11 @@ namespace EcommerceEcovilleASP.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Produtos = _produtoDAO.ListarProdutos();
+            ViewBag.DataHora = DateTime.Now;
             return View();
         }
+
 
         public IActionResult Cadastrar()
         {
@@ -38,7 +41,40 @@ namespace EcommerceEcovilleASP.Controllers
 
             };
             _produtoDAO.CadastrarProduto(p);
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public IActionResult Editar(int? id)
+        {
+            ViewBag.Produto = _produtoDAO.BuscarProdutoPeloId(id);
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Editar(string txtNome, string txtDescricao,
+                            string txtPreco, string txtQuantidade, int txtId)
+        {
+
+            Produto p = _produtoDAO.BuscarProdutoPeloId(txtId);
+            p.Nome = txtNome;
+            p.Descricao = txtDescricao;
+            p.Preco = Convert.ToDouble(txtPreco.Replace("R$",""));
+            p.Quantidade = Convert.ToInt32(txtQuantidade);
+            _produtoDAO.EditarProduto(p);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Remover(int? id)
+        {
+            if (id != null)
+            {
+            Produto p = _produtoDAO.BuscarProdutoPeloId(id);
+                _produtoDAO.RemoverProduto(p);
+            }
+            return RedirectToAction("Index");
         }
     }
 }

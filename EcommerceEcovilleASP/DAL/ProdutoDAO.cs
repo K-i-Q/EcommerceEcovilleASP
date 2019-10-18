@@ -1,4 +1,5 @@
 ﻿using EcommerceEcovilleASP.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,20 @@ namespace EcommerceEcovilleASP.DAL
             _context.Produtos.Add(p);
             _context.SaveChanges();
         }
+
+        public void EditarProduto(Produto p)
+        {
+            _context.Entry(p).State = EntityState.Modified;
+            _context.SaveChanges();
+        }
+        public void RemoverProduto(Produto p)
+        {
+            _context.Produtos.Remove(p);
+            _context.SaveChanges();
+        }
+
+        public Produto BuscarProdutoPeloId(int? id) => _context.Produtos.Find(id);
+
+        public List<Produto> ListarProdutos() => _context.Produtos.ToList();
     }
 }
