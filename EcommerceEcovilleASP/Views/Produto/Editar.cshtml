@@ -1,27 +1,25 @@
-﻿@{ 
-    Produto p = ViewBag.Produto;
-}
-    <form asp-action="Editar" method="post">
-        <fieldset>
-            <legend>Edição de Produto</legend>
-            <div class="form-group">
-                <input type="hidden" name="txtId" value="@p.ProdutoId" />
-                <label>Nome:</label><br />
-                <input class="form-control" type="text" name="txtNome" value="@p.Nome" /><br />
-            </div>
+﻿@model Produto
+<form asp-action="Editar" method="post">
+    <fieldset>
+        <legend>Edição de Produto</legend>
+        <div class="form-group">
+            <input type="hidden" asp-for="ProdutoId" />
+            <label>Nome:</label><br />
+            <input class="form-control" type="text" asp-for="Nome" /><br />
+        </div>
 
-            <div class="form-group">
-                <label>Descrição:</label><br />
-                <input class="form-control" type="text" name="txtDescricao" value="@p.Descricao" />
-            </div>
-            <div class="form-group">
-                <label>Preço:</label><br />
-                <input class="form-control" type="text" name="txtPreco" value="@p.Preco.ToString("C2")" />
-            </div>
-            <div class="form-group">
-                <label>Quantidade:</label><br />
-                <input class="form-control" type="text" name="txtQuantidade" value="@p.Quantidade" />
-            </div>
-            <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Editar" />
-        </fieldset>
+        <div class="form-group">
+            <label>Descrição:</label><br />
+            <input class="form-control" type="text" asp-for="Descricao"  />
+        </div>
+        <div class="form-group">
+            <label>Preço:</label><br />
+            <input class="form-control" type="text" asp-for="Preco"/>
+        </div>
+        <div class="form-group">
+            <label>Quantidade:</label><br />
+            <input class="form-control" type="text" asp-for="Quantidade" />
+        </div>
+        <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Editar" />
+    </fieldset>
 </form>

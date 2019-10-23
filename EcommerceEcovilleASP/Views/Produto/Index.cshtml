@@ -1,5 +1,5 @@
-﻿@{ 
-    List <Produto> produtos = ViewBag.Produtos;
+﻿@model List<Produto>
+@{ 
     DateTime dataHora = ViewBag.DataHora;
 }
 
@@ -19,9 +19,9 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (Produto item in produtos)
+                @foreach (Produto item in Model)
                 {
-                    <tr class="table-light">
+                    <tr class="table-dark">
                         <th scope="row">@item.Nome</th>
                         <td>@item.Descricao</td>
                         <td>@item.Preco.ToString("C2")</td>

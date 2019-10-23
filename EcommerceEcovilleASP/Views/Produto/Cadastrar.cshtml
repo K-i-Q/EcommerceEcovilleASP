@@ -1,21 +1,23 @@
-﻿<form asp-action="Cadastrar" method="post">
+﻿@model Produto
+
+<form asp-action="Cadastrar" method="post">
     <fieldset>
     <legend>Cadastro de Produto</legend>
         <div class="form-group">
             <label>Nome:</label><br />
-            <input class="form-control" type="text" name="txtNome" value="" />
+            <input class="form-control" type="text" asp-for="Nome"  />
         </div>
         <div class="form-group">
             <label>Descrição:</label><br />
-            <input class="form-control" type="text" name="txtDescricao" value="" />
+            <input class="form-control" type="text" asp-for="Descricao"  />
         </div>
         <div class="form-group">
             <label>Preço:</label><br />
-            <input class="form-control" type="text" name="txtPreco" value="" />
+            <input class="form-control" type="text" asp-for="Preco"/>
         </div>
         <div class="form-group">
             <label>Quantidade:</label><br />
-            <input class="form-control" type="text" name="txtQuantidade" value="" />
+            <input class="form-control" type="text" asp-for="Quantidade" />
         </div>
         <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Cadastrar" />
     </fieldset>

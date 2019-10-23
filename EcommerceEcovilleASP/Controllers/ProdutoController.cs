@@ -18,9 +18,8 @@ namespace EcommerceEcovilleASP.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Produtos = _produtoDAO.ListarProdutos();
             ViewBag.DataHora = DateTime.Now;
-            return View();
+            return View(_produtoDAO.ListarProdutos());
         }
 
 
@@ -30,17 +29,9 @@ namespace EcommerceEcovilleASP.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(string txtNome,string txtDescricao,string txtPreco,string txtQuantidade)
+        public IActionResult Cadastrar(Produto produto)
         {
-            Produto p = new Produto
-            {
-                Nome = txtNome,
-                Descricao = txtDescricao,
-                Preco = Convert.ToDouble(txtPreco),
-                Quantidade = Convert.ToInt32(txtQuantidade)
-
-            };
-            _produtoDAO.CadastrarProduto(p);
+            _produtoDAO.CadastrarProduto(produto);
             return RedirectToAction("Index");
         }
 
@@ -48,20 +39,18 @@ namespace EcommerceEcovilleASP.Controllers
         [HttpGet]
         public IActionResult Editar(int? id)
         {
-            ViewBag.Produto = _produtoDAO.BuscarProdutoPeloId(id);
-            return View();
+            return View(_produtoDAO.BuscarProdutoPeloId(id));
         }
 
         [HttpPost]
-        public IActionResult Editar(string txtNome, string txtDescricao,
-                            string txtPreco, string txtQuantidade, int txtId)
+        public IActionResult Editar(Produto produto)
         {
 
-            Produto p = _produtoDAO.BuscarProdutoPeloId(txtId);
-            p.Nome = txtNome;
-            p.Descricao = txtDescricao;
-            p.Preco = Convert.ToDouble(txtPreco.Replace("R$",""));
-            p.Quantidade = Convert.ToInt32(txtQuantidade);
+            Produto p = _produtoDAO.BuscarProdutoPeloId(produto.ProdutoId);
+            p.Nome = produto.Nome;
+            p.Descricao = produto.Descricao;
+            p.Preco = produto.Preco;
+            p.Quantidade = produto.Quantidade;
             _produtoDAO.EditarProduto(p);
             return RedirectToAction("Index");
         }
