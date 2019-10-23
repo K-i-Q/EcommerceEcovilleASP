@@ -75,3 +75,4 @@ C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\De
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.pdb
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.csproj.CopyComplete
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs

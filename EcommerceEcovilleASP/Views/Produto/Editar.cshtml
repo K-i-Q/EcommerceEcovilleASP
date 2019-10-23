@@ -1,9 +1,9 @@
 ﻿@{ 
-    Layout = "~/Views/Shared/_Layout.cshtml";
     Produto p = ViewBag.Produto;
 }
     <form asp-action="Editar" method="post">
         <fieldset>
+            <legend>Edição de Produto</legend>
             <div class="form-group">
                 <input type="hidden" name="txtId" value="@p.ProdutoId" />
                 <label>Nome:</label><br />
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label>Quantidade:</label><br />
-                <input class="form-control" type="text" name="txtPreco" value="@p.Quantidade" />
+                <input class="form-control" type="text" name="txtQuantidade" value="@p.Quantidade" />
             </div>
             <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Editar" />
         </fieldset>
