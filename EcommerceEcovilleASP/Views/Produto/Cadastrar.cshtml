@@ -1,21 +1,25 @@
-﻿<!DOCTYPE html>
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form asp-action="Cadastrar" method="post">
+    <fieldset>
+        <div class="form-group">
+            <label>Nome:</label><br />
+            <input class="form-control" type="text" name="txtNome" value="" />
+        </div>
+        <div class="form-group">
+            <label>Descrição:</label><br />
+            <input class="form-control" type="text" name="txtDescricao" value="" />
+        </div>
+        <div class="form-group">
+            <label>Preço:</label><br />
+            <input class="form-control" type="text" name="txtPreco" value="" />
+        </div>
+        <div class="form-group">
+            <label>Quantidade:</label><br />
+            <input class="form-control" type="text" name="txtQuantidade" value="" />
+        </div>
+        <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Cadastrar" />
+    </fieldset>
+</form>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Cadastrar</title>
-</head>
-<body>
-    <form asp-action="Cadastrar" method="post">
-        <label>Nome:</label><br />
-        <input type="text" name="txtNome" value="" /><br />
-        <label>Descrição:</label><br />
-        <input type="text" name="txtDescricao" value="" /><br />
-        <label>Preço:</label><br />
-        <input type="text" name="txtPreco" value="" /><br />
-        <label>Quantidade:</label><br />
-        <input type="text" name="txtQuantidade" value="" /><br />
-        <input type="submit" name="submit" value="Cadastrar" />
-    </form>
-</body>
-</html>

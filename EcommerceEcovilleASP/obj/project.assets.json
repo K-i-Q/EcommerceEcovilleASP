@@ -12543,11 +12543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
       "projectName": "EcommerceEcovilleASP",
-      "projectPath": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
