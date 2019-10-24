@@ -31,8 +31,17 @@ namespace EcommerceEcovilleASP.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Produto produto)
         {
-            _produtoDAO.CadastrarProduto(produto);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                if (!_produtoDAO.ExisteProduto(produto.Nome))
+                {
+                    _produtoDAO.CadastrarProduto(produto);
+                    return RedirectToAction("Index");
+                }
+                ModelState.AddModelError("", "Esse produto já existe!");
+                return View(produto);
+            }
+            return View(produto);
         }
 
 
@@ -60,7 +69,7 @@ namespace EcommerceEcovilleASP.Controllers
         {
             if (id != null)
             {
-            Produto p = _produtoDAO.BuscarProdutoPeloId(id);
+                Produto p = _produtoDAO.BuscarProdutoPeloId(id);
                 _produtoDAO.RemoverProduto(p);
             }
             return RedirectToAction("Index");

@@ -35,6 +35,9 @@ namespace EcommerceEcovilleASP.DAL
         }
 
         public Produto BuscarProdutoPeloId(int? id) => _context.Produtos.Find(id);
+        public bool ExisteProduto(string nome) => _context.Produtos.FirstOrDefault(x => x.Nome.Equals(nome)) != null;
+
+        
 
         public List<Produto> ListarProdutos() => _context.Produtos.ToList();
     }
