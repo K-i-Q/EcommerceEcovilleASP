@@ -19,12 +19,12 @@ using EcommerceEcovilleASP;
 #line default
 #line hidden
 #line 2 "C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\Views\_ViewImports.cshtml"
-using EcommerceEcovilleASP.Models;
+using Domain;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ae94635c7e4b42b9ba8f95d13e12bc9c54cbe48f", @"/Views/Produto/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"68c5ecb0e520d85d579ff3a421e7f6ab283d2894", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"32086782a1f57e9fb91bef40044fc6bf9a5fcc42", @"/Views/_ViewImports.cshtml")]
     public class Views_Produto_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Produto>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-success"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -139,7 +139,7 @@ using EcommerceEcovilleASP.Models;
             WriteLiteral("</td>\r\n                        <td>");
             EndContext();
             BeginContext(1024, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e79b949f6fb4d0db1451f6e0f833631", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1582cece40614a81b235f4e394ada7ce", async() => {
                 BeginContext(1102, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -175,7 +175,7 @@ using EcommerceEcovilleASP.Models;
             WriteLiteral("</td>\r\n                        <td>");
             EndContext();
             BeginContext(1147, 98, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a7afd6a303d42c69a751a483aaefa9f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b2924fe71234882be91918dffaca410", async() => {
                 BeginContext(1234, 7, true);
                 WriteLiteral("Remover");
                 EndContext();

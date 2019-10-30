@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Domain;
 using EcommerceEcovilleASP.DAL;
-using EcommerceEcovilleASP.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace EcommerceEcovilleASP.Controllers
 {
@@ -19,7 +16,7 @@ namespace EcommerceEcovilleASP.Controllers
         public IActionResult Index()
         {
             ViewBag.DataHora = DateTime.Now;
-            return View(_produtoDAO.ListarProdutos());
+            return View(_produtoDAO.ListarTodos());
         }
 
 
@@ -35,8 +32,11 @@ namespace EcommerceEcovilleASP.Controllers
             {
                 if (!_produtoDAO.ExisteProduto(produto.Nome))
                 {
-                    _produtoDAO.CadastrarProduto(produto);
-                    return RedirectToAction("Index");
+                    if (_produtoDAO.Cadastrar(produto))
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    ModelState.AddModelError("", "Erro ao cadastrar");
                 }
                 ModelState.AddModelError("", "Esse produto já existe!");
                 return View(produto);
@@ -48,14 +48,14 @@ namespace EcommerceEcovilleASP.Controllers
         [HttpGet]
         public IActionResult Editar(int? id)
         {
-            return View(_produtoDAO.BuscarProdutoPeloId(id));
+            return View(_produtoDAO.BuscarPorId(id));
         }
 
         [HttpPost]
         public IActionResult Editar(Produto produto)
         {
 
-            Produto p = _produtoDAO.BuscarProdutoPeloId(produto.ProdutoId);
+            Produto p = _produtoDAO.BuscarPorId(produto.ProdutoId);
             p.Nome = produto.Nome;
             p.Descricao = produto.Descricao;
             p.Preco = produto.Preco;
@@ -69,7 +69,7 @@ namespace EcommerceEcovilleASP.Controllers
         {
             if (id != null)
             {
-                Produto p = _produtoDAO.BuscarProdutoPeloId(id);
+                Produto p = _produtoDAO.BuscarPorId(id);
                 _produtoDAO.RemoverProduto(p);
             }
             return RedirectToAction("Index");
