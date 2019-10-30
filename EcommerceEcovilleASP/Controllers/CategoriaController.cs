@@ -55,6 +55,7 @@ namespace EcommerceEcovilleASP.Controllers
                     _categoriaDAO.Cadastrar(categoria);
                     return RedirectToAction(nameof(Index));
                 }
+                ModelState.AddModelError("", "Essa categoria já existe");
             }
             return View(categoria);
         }

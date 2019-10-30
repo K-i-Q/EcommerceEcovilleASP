@@ -1,4 +1,5 @@
 ﻿@model Produto
+
 <form asp-action="Cadastrar" method="post">
     <fieldset>
         <legend>Cadastro de Produto</legend>
@@ -22,6 +23,11 @@
             <label asp-for="Quantidade"></label>
             <input class="form-control" type="text" asp-for="Quantidade" />
             <span class="text-primary" asp-validation-for="Quantidade"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Categoria"></label>
+            <select class="form-control" type="text" name="dropCategoria"  asp-items="@ViewBag.Categorias"></select>
+            <span class="text-primary" asp-validation-for="Categoria"></span>
         </div>
         <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Cadastrar" />
     </fieldset>

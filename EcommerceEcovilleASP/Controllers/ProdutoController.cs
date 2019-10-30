@@ -1,6 +1,8 @@
 ﻿using Domain;
 using EcommerceEcovilleASP.DAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Repository;
 using System;
 
 namespace EcommerceEcovilleASP.Controllers
@@ -8,9 +10,11 @@ namespace EcommerceEcovilleASP.Controllers
     public class ProdutoController : Controller
     {
         private readonly ProdutoDAO _produtoDAO;
-        public ProdutoController(ProdutoDAO produtoDAO)
+        private readonly CategoriaDAO _categoriaDAO;
+        public ProdutoController(ProdutoDAO produtoDAO, CategoriaDAO categoriaDAO)
         {
             _produtoDAO = produtoDAO;
+            _categoriaDAO = categoriaDAO;
         }
 
         public IActionResult Index()
@@ -22,16 +26,19 @@ namespace EcommerceEcovilleASP.Controllers
 
         public IActionResult Cadastrar()
         {
+            ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId", "Nome");
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Produto produto)
+        public IActionResult Cadastrar(Produto produto, long dropCategoria)
         {
+            ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId", "Nome");
             if (ModelState.IsValid)
             {
                 if (!_produtoDAO.ExisteProduto(produto.Nome))
                 {
+                    produto.Categoria = _categoriaDAO.BuscarPorId(dropCategoria);
                     if (_produtoDAO.Cadastrar(produto))
                     {
                         return RedirectToAction("Index");
