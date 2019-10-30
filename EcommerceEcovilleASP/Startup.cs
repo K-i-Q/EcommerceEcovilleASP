@@ -37,6 +37,7 @@ namespace EcommerceEcovilleASP
                 Configuration.GetConnectionString("EcommerceConnection")
                 ));
             services.AddScoped<ProdutoDAO>();
+            services.AddScoped<CategoriaDAO>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

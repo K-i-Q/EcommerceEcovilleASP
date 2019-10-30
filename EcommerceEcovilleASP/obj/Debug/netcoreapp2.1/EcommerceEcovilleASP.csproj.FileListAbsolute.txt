@@ -80,4 +80,8 @@ C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\De
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.csproj.CopyComplete
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.dll
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\EcommerceEcovilleASP.pdb
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Create.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Delete.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Details.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Edit.g.cshtml.cs
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Index.g.cshtml.cs
