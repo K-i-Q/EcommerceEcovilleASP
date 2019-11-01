@@ -85,3 +85,13 @@ C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\De
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Details.g.cshtml.cs
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Edit.g.cshtml.cs
 C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Index.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Endereco\Create.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Endereco\Delete.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Endereco\Details.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Endereco\Edit.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Endereco\Index.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Create.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Delete.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Details.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Edit.g.cshtml.cs
+C:\Users\Aluno\Documents\GitHub\EcommerceEcovilleASP\EcommerceEcovilleASP\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Index.g.cshtml.cs

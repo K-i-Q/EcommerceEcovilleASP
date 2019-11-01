@@ -9,6 +9,9 @@ namespace Repository
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias{ get; set; }
+        //Ñão é necessário inserir DbSet<Endereco>. É gerado dentro do banco pois Usuarios tem relacionamento
+        public DbSet<Endereco> Enderecos{ get; set; }
+        public DbSet<Usuario> Usuarios{ get; set; }
 
     }
 }
