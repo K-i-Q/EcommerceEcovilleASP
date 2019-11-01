@@ -41,6 +41,11 @@ namespace EcommerceEcovilleASP.Controllers
         // GET: Usuario/Create
         public IActionResult Create()
         {
+            if (TempData["Endereco"] != null)
+            {
+                string resultado = TempData["Endereco"].ToString();
+                Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
+            }
             return View();
         }
 
@@ -78,11 +83,11 @@ namespace EcommerceEcovilleASP.Controllers
         [HttpPost]
         public IActionResult BuscarCep(Usuario usuario)
         {
-            string url = "https://viacep.com.br/ws/"+ usuario.Endereco.Cep + "/json/";
+            string url = "https://viacep.com.br/ws/" + usuario.Endereco.Cep + "/json/";
             WebClient client = new WebClient();
             string resultado = client.DownloadString(url);
-            Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
-            TempData["Endereco"] = endereco;
+            //Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
+            TempData["Endereco"] = resultado;
             return RedirectToAction(nameof(Create));
         }
         // POST: Usuario/Edit/5

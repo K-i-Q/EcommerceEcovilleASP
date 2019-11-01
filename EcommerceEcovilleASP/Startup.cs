@@ -27,7 +27,7 @@ namespace EcommerceEcovilleASP
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -36,6 +36,10 @@ namespace EcommerceEcovilleASP
             services.AddDbContext<Context>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("EcommerceConnection")
                 ));
+            //Config sessão deve ser antes da injeção de dependência do MVC
+            services.AddSession();//habilita sessão
+            services.AddDistributedMemoryCache(); //melhora desempenho(distribui mémória);
+
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
             services.AddScoped<UsuarioDAO>();
@@ -60,6 +64,7 @@ namespace EcommerceEcovilleASP
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();//minha aplicação usa sessão
 
             app.UseMvc(routes =>
             {
