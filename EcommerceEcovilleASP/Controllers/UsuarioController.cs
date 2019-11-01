@@ -41,12 +41,15 @@ namespace EcommerceEcovilleASP.Controllers
         // GET: Usuario/Create
         public IActionResult Create()
         {
+            Usuario user = new Usuario();
             if (TempData["Endereco"] != null)
             {
                 string resultado = TempData["Endereco"].ToString();
                 Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
+                user.Endereco = endereco;
             }
-            return View();
+            //mostrar dados no formulário
+            return View(user);
         }
 
         // POST: Usuario/Create
