@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Repository
 {
-    class EnderecoDAO : IRepository<Endereco>
+    public class EnderecoDAO : IRepository<Endereco>
     {
         private readonly Context _context;
         public EnderecoDAO(Context context)

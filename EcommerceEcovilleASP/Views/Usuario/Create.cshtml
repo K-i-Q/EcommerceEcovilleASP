@@ -14,29 +14,30 @@
         <form method="post">
             <fieldset>
                 <legend>Dados do Endereço</legend>
-                <div asp-validation-summary="ModelOnly" class="text-primary">
-                    <div>
-                        <label asp-for="Endereco.Cep"></label>
-                        <input type="text" asp-for="Endereco.Cep" class="form-control" />
-                    </div>
-                    <div>
-                        <label asp-for="Endereco.Logradouro"></label>
-                        <input type="text" asp-for="Endereco.Logradouro" readonly class="form-control" />
-                    </div>
-                    <div>
-                        <label asp-for="Endereco.Bairro"></label>
-                        <input type="text" asp-for="Endereco.Bairro" readonly class="form-control" />
-                    </div>
-                    <div>
-                        <label asp-for="Endereco.Localidade"></label>
-                        <input type="text" asp-for="Endereco.Localidade" readonly class="form-control" />
-                    </div>
-                    <div>
-                        <label asp-for="Endereco.Uf"></label>
-                        <input type="text" asp-for="Endereco.Uf" readonly class="form-control" />
-                    </div>
-                </div>
             </fieldset>
+
+                <div>
+                    <label asp-for="Endereco.Cep"></label>
+                    <input type="text" asp-for="Endereco.Cep" class="form-control" />
+                </div>
+
+            <div>
+                <label asp-for="Endereco.Logradouro"></label>
+                <input type="text" asp-for="Endereco.Logradouro" readonly class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Endereco.Bairro"></label>
+                <input type="text" asp-for="Endereco.Bairro" readonly class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Endereco.Localidade"></label>
+                <input type="text" asp-for="Endereco.Localidade" readonly class="form-control" />
+            </div>
+            <div>
+                <label asp-for="Endereco.Uf"></label>
+                <input type="text" asp-for="Endereco.Uf" readonly class="form-control" />
+            </div>
+            <input type="submit" class="btn btn-primary" asp-action="BuscarCep" asp-controller="Usuario" />
         </form>
     </div>
 </div>

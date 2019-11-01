@@ -27,5 +27,33 @@ namespace Repository
         }
 
         public List<Usuario> ListarTodos() => _context.Usuarios.ToList();
+
+        public bool EditarUsuario(Usuario usuario)
+        {
+            if (usuario != null)
+            {
+                _context.Usuarios.Update(usuario);
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool ExisteUsuario(long? id) => _context.Usuarios.Find(id) != null;
+        public bool ExisteUsuarios(long? id)
+        {
+            var usuario = _context.Usuarios.Find(id);
+            if (usuario != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void DeletarUsuario(long? id)
+        {
+            _context.Usuarios.Remove(BuscarPorId(id));
+            _context.SaveChanges();
+        }
     }
 }

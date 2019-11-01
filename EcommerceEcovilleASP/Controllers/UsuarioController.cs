@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Domain;
 using Repository;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace EcommerceEcovilleASP.Controllers
 {
@@ -76,6 +78,11 @@ namespace EcommerceEcovilleASP.Controllers
         [HttpPost]
         public IActionResult BuscarCep(Usuario usuario)
         {
+            string url = "https://viacep.com.br/ws/"+ usuario.Endereco.Cep + "/json/";
+            WebClient client = new WebClient();
+            string resultado = client.DownloadString(url);
+            Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
+            TempData["Endereco"] = endereco;
             return RedirectToAction(nameof(Create));
         }
         // POST: Usuario/Edit/5
@@ -83,7 +90,7 @@ namespace EcommerceEcovilleASP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("UsuarioId,Email,Senha,ConfirmacaoSenha")] Usuario usuario)
+        public IActionResult Edit(long id, [Bind("UsuarioId,Email,Senha,ConfirmacaoSenha")] Usuario usuario)
         {
             if (id != usuario.UsuarioId)
             {
@@ -94,8 +101,7 @@ namespace EcommerceEcovilleASP.Controllers
             {
                 try
                 {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
+                    _usuarioDAO.EditarUsuario(usuario);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -114,15 +120,14 @@ namespace EcommerceEcovilleASP.Controllers
         }
 
         // GET: Usuario/Delete/5
-        public async Task<IActionResult> Delete(long? id)
+        public IActionResult Delete(long? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.UsuarioId == id);
+            var usuario = _usuarioDAO.BuscarPorId(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -134,17 +139,15 @@ namespace EcommerceEcovilleASP.Controllers
         // POST: Usuario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(long id)
+        public IActionResult DeleteConfirmed(long id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync();
+            _usuarioDAO.DeletarUsuario(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool UsuarioExists(long id)
         {
-            return _context.Usuarios.Any(e => e.UsuarioId == id);
+            return _usuarioDAO.ExisteUsuario(id);
         }
     }
 }

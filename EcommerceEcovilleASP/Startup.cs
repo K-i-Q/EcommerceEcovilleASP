@@ -38,6 +38,8 @@ namespace EcommerceEcovilleASP
                 ));
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
+            services.AddScoped<UsuarioDAO>();
+            services.AddScoped<EnderecoDAO>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
