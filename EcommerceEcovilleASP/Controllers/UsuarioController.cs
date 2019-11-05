@@ -61,8 +61,12 @@ namespace EcommerceEcovilleASP.Controllers
         {
             if (ModelState.IsValid)
             {
-                _usuarioDAO.Cadastrar(usuario);
-                return RedirectToAction(nameof(Index));
+
+                if (_usuarioDAO.Cadastrar(usuario))
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                ModelState.AddModelError("", "Usuário já existe em nossa base de dados");
             }
             return View(usuario);
         }

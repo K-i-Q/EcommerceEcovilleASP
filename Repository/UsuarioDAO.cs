@@ -17,7 +17,7 @@ namespace Repository
 
         public bool Cadastrar(Usuario objeto)
         {
-            if (objeto != null)
+            if (objeto != null && BuscarPorEmail(objeto) == null)
             {
                 _context.Usuarios.Add(objeto);
                 _context.SaveChanges();
@@ -25,6 +25,8 @@ namespace Repository
             }
             return false;
         }
+
+        public Usuario BuscarPorEmail(Usuario usuario) => _context.Usuarios.FirstOrDefault(x => x.Email.Equals(usuario.Email));
 
         public List<Usuario> ListarTodos() => _context.Usuarios.ToList();
 
@@ -40,15 +42,6 @@ namespace Repository
         }
 
         public bool ExisteUsuario(long? id) => _context.Usuarios.Find(id) != null;
-        public bool ExisteUsuarios(long? id)
-        {
-            var usuario = _context.Usuarios.Find(id);
-            if (usuario != null)
-            {
-                return true;
-            }
-            return false;
-        }
 
         public void DeletarUsuario(long? id)
         {
