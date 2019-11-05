@@ -57,7 +57,7 @@ namespace EcommerceEcovilleASP.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("UsuarioId,Email,Senha,ConfirmacaoSenha")] Usuario usuario)
+        public IActionResult Create([Bind("UsuarioId,Email,Senha,ConfirmacaoSenha,Endereco")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {

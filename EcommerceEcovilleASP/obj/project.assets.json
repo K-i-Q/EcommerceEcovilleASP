@@ -12578,11 +12578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
+      "projectUniqueName": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
       "projectName": "EcommerceEcovilleASP",
-      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
+      "projectPath": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\EcommerceEcovilleASP.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\obj\\",
+      "outputPath": "C:\\_dev\\EcommerceEcovilleASP\\EcommerceEcovilleASP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -12603,11 +12603,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\Domain\\Domain.csproj"
+            "C:\\_dev\\EcommerceEcovilleASP\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\_dev\\EcommerceEcovilleASP\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\EcommerceEcovilleASP\\Repository\\Repository.csproj"
+            "C:\\_dev\\EcommerceEcovilleASP\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\_dev\\EcommerceEcovilleASP\\Repository\\Repository.csproj"
             }
           }
         }
