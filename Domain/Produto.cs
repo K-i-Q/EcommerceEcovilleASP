@@ -30,6 +30,8 @@ namespace Domain
         [Display(Name = "Quantidade:")]
         [Range(1, 1000, ErrorMessage = "A quantidade deve estar entre 1 e 1000")]
         public int? Quantidade { get; set; }
+        [Display(Name ="Imagem")]
+        public string Imagem { get; set; }
         public DateTime CriadoEm { get; set; }
 
         public Categoria Categoria { get; set; }
