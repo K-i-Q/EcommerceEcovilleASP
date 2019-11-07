@@ -1,9 +1,12 @@
 ﻿using Domain;
 using EcommerceEcovilleASP.DAL;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository;
 using System;
+using System.IO;
 
 namespace EcommerceEcovilleASP.Controllers
 {
@@ -11,10 +14,13 @@ namespace EcommerceEcovilleASP.Controllers
     {
         private readonly ProdutoDAO _produtoDAO;
         private readonly CategoriaDAO _categoriaDAO;
-        public ProdutoController(ProdutoDAO produtoDAO, CategoriaDAO categoriaDAO)
+        private readonly IHostingEnvironment _hosting;
+        private string nomePastaParaSalvarImagem = "ecommerceImagens";
+        public ProdutoController(ProdutoDAO produtoDAO, CategoriaDAO categoriaDAO, IHostingEnvironment hosting)
         {
             _produtoDAO = produtoDAO;
             _categoriaDAO = categoriaDAO;
+            _hosting = hosting;
         }
 
         public IActionResult Index()
@@ -31,13 +37,30 @@ namespace EcommerceEcovilleASP.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Produto produto, long dropCategoria)
+        public IActionResult Cadastrar(Produto produto, long dropCategoria, IFormFile fupImagem)
         {
             ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId", "Nome");
+            string arquivo;
+            string caminho;
+
             if (ModelState.IsValid)
             {
                 if (!_produtoDAO.ExisteProduto(produto.Nome))
                 {
+                    if (fupImagem != null)
+                    {
+                        //Path.GetFileName retorna o nome do arquivo independente das particularidades do sistema operacional
+                        arquivo = Guid.NewGuid().ToString() + Path.GetExtension(fupImagem.FileName);// Path.GetFileName(fupImagem.FileName);
+                                                                                                    //WebRootPath retornar caminho da aplicação de forma dinâmica
+                                                                                                    //Path.Combine concatena de forma dinâmica independente das particularidades do s.o
+                        caminho = Path.Combine(_hosting.WebRootPath, nomePastaParaSalvarImagem, arquivo);
+                        fupImagem.CopyTo(new FileStream(caminho, FileMode.Create));
+                        produto.Imagem = arquivo;
+                    }
+                    else
+                    {
+                        produto.Imagem = "s_imagem.jpg";
+                    }
                     produto.Categoria = _categoriaDAO.BuscarPorId(dropCategoria);
                     if (_produtoDAO.Cadastrar(produto))
                     {
