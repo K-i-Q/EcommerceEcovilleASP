@@ -26,8 +26,12 @@
         </div>
         <div class="form-group">
             <label asp-for="Categoria"></label>
-            <select class="form-control" type="text" name="dropCategoria"  asp-items="@ViewBag.Categorias"></select>
+            <select class="form-control" type="text" name="dropCategoria" asp-items="@ViewBag.Categorias"></select>
             <span class="text-primary" asp-validation-for="Categoria"></span>
+        </div>
+        <div class="form-group" id="Imagem">
+            <label asp-for="Imagem"></label>
+            <input type="file" name="fupImagem" />
         </div>
         <input type="submit" class="btn btn-info btn-block btn-lg" name="submit" value="Cadastrar" />
     </fieldset>
